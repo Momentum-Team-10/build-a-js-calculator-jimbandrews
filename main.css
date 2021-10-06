@@ -2,16 +2,40 @@
     box-sizing: border-box;
 }
 
-div {
-    display: flex;
-    justify-content: space-evenly;
+#calc {
+    max-width: 500px;
 }
 
-.first-row p {
-    flex: 1 1 auto;
+#calc > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#first {
+    height: 125px;
 }
 
 .first-button {
-    
-    flex-shrink: 3;
+    text-align: center;
+    line-height: 125px;
+    background-color: #ffef00;
+    border: 2px solid pink;
+}
+
+.empty {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    background-color: #ffef00;
+    border: 1px solid pink;
+}
+
+
+
+.other-row > div {
+    text-align: center;
+    line-height: 125px;
+    height: 125px;
+    background-color: #ffef00;
+    border: 1px solid pink;
+
 }
