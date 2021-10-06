@@ -15,21 +15,21 @@
     height: 125px;
 }
 
-.first-button {
+.first.button {
     text-align: center;
     line-height: 125px;
     background-color: #ffef00;
     border: 2px solid pink;
 }
 
-.empty {
+#display {
     grid-column-start: 2;
     grid-column-end: 5;
-    background-color: #ffef00;
-    border: 1px solid pink;
+    text-align: start;
+    line-height: 125px;
+    background-color: darkcyan;
+    border: 2px solid pink;
 }
-
-
 
 .other-row > div {
     text-align: center;
