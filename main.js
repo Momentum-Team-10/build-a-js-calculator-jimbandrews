@@ -14,6 +14,12 @@ for (let button of buttons) {
             equalsTest = 0;
         }
     })
+    button.addEventListener('mouseover', () => {
+        button.style.backgroundColor = "red";
+    })
+    button.addEventListener('mouseout', () => {
+        button.style.backgroundColor = "#ffef00";
+    })
 }
 
 // create event for equals button
