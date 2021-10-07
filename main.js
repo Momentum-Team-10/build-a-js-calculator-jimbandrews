@@ -11,6 +11,12 @@ for (let button of buttons) {
     button.addEventListener('mouseout', () => {
         button.style.backgroundColor = "#ffef00";
     })
+    button.addEventListener('mousedown', () => {
+        button.style.backgroundColor = "green";
+    })
+    button.addEventListener('mouseup', () => {
+        button.style.backgroundColor = "red";
+    })
 }
 
 // clicked number buttons show up on display, and clear display if equals has been clicked 
@@ -41,8 +47,14 @@ for (let button of operators) {
 let equals = document.getElementById('equals')
 
 equals.addEventListener('click', () => {
-    display.innerText = eval(display.innerText);
-    equalsTest = 1;
+    try {
+        display.innerText = eval(display.innerText);
+        equalsTest = 1;
+    }
+    catch (error) {
+        display.innerText = 'INVALID ENTRY';
+        equalsTest = 1;
+    }
 })
 
 
