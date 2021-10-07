@@ -1,6 +1,6 @@
 let display = document.getElementById('display');
 
-var equalsTest = 1;
+let equalsTest = 1;
 
 // all buttons change color as mouse passes over and reverts when mouse leaves button's space
 let buttons = document.querySelectorAll('.button')
