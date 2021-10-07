@@ -1,19 +1,10 @@
 let display = document.getElementById('display');
 
-var equalsTest = 0;
+var equalsTest = 1;
 
-// create event for all number and operator buttons
-let buttons = document.querySelectorAll('.button');
-
+// all buttons change color as mouse passes over and reverts when mouse leaves button's space
+let buttons = document.querySelectorAll('.button')
 for (let button of buttons) {
-    button.addEventListener('click', () => {
-        if (equalsTest === 0) {
-            display.innerText += button.innerText;
-        } else {
-            display.innerText = button.innerText;
-            equalsTest = 0;
-        }
-    })
     button.addEventListener('mouseover', () => {
         button.style.backgroundColor = "red";
     })
@@ -22,7 +13,31 @@ for (let button of buttons) {
     })
 }
 
-// create event for equals button
+// clicked number buttons show up on display, and clear display if equals has been clicked 
+let numbuttons = document.querySelectorAll('.num.button');
+
+for (let button of numbuttons) {
+    button.addEventListener('click', () => {
+        if (equalsTest === 0) {
+            display.innerText += button.innerText;
+        } else {
+            display.innerText = button.innerText;
+            equalsTest = 0;
+        }
+    })
+}
+
+// operator button clicks add to display and change equalstest to 0
+let operators = document.querySelectorAll('.op.button')
+
+for (let button of operators) {
+    button.addEventListener('click', () => {
+        display.innerText += button.innerText;
+        equalsTest = 0;
+    })
+}
+
+// equals click evaluates display string and changes equalstest to 1
 let equals = document.getElementById('equals')
 
 equals.addEventListener('click', () => {
@@ -30,9 +45,23 @@ equals.addEventListener('click', () => {
     equalsTest = 1;
 })
 
-// create event for clear button
+
+// clear button click clears display
 let clear = document.getElementById('clear')
 
 clear.addEventListener('click', () => {
-    display.innerText = ''
+    display.innerText = '';
+    equalsTest = 1;
+})
+
+// decimal button click on empty display shows '0.'
+let decimal = document.getElementById('decimal')
+
+decimal.addEventListener('click', () => {
+    if (equalsTest === 0) {
+        display.innerText += decimal.innerText;
+    } else {
+        display.innerText = '0' + decimal.innerText;
+        equalsTest = 0;
+    }
 })
