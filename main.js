@@ -58,10 +58,12 @@ clear.addEventListener('click', () => {
 let decimal = document.getElementById('decimal')
 
 decimal.addEventListener('click', () => {
-    if (equalsTest === 0) {
-        display.innerText += decimal.innerText;
-    } else {
+    if (equalsTest !== 0) {
         display.innerText = '0' + decimal.innerText;
         equalsTest = 0;
+    }else if (display.innerText.includes('.')) {
+        display.innerText = display.innerText; 
+    } else {
+        display.innerText += decimal.innerText;
     }
 })
