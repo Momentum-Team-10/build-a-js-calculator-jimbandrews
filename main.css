@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+#calc {
+    max-width: 500px;
+}
+
+#calc > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#first {
+    height: 125px;
+}
+
+.first.button {
+    text-align: center;
+    line-height: 125px;
+    background-color: #ffef00;
+    border: 2px solid pink;
+}
+
+#display {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    text-align: end;
+    line-height: 125px;
+    background-color: darkcyan;
+    border: 2px solid pink;
+}
+
+.other-row > div {
+    text-align: center;
+    line-height: 125px;
+    height: 125px;
+    background-color: #ffef00;
+    border: 1px solid pink;
+
+}
