@@ -34,9 +34,9 @@ for (let button of numbuttons) {
 }
 
 // operator button clicks add to display and change equalstest to 0
-let operators = document.querySelectorAll('.op.button')
+let opButtons = document.querySelectorAll('.op.button')
 
-for (let button of operators) {
+for (let button of opButtons) {
     button.addEventListener('click', () => {
         display.innerText += button.innerText;
         equalsTest = 0;
@@ -79,3 +79,14 @@ decimal.addEventListener('click', () => {
         display.innerText += decimal.innerText;
     }
 })
+
+// let operators = ['+','-','/','*']
+
+// let decimalQuery = (array) => {
+//     if (array.length === 1) {
+//         return array[0];
+//     } else {
+//         newArray = 
+//         decimalQuery(array[-1]);
+//     }
+// }
